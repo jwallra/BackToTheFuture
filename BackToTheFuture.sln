@@ -5,14 +5,10 @@ VisualStudioVersion = 15.0.25906.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RidoClassicApp", "RidoClassicApp\RidoClassicApp.csproj", "{FFBED8FC-EB02-4859-860E-26629F7F9D15}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{35DD90E9-25C7-46F6-8018-4B8302FD8F11}"
-	ProjectSection(SolutionItems) = preProject
-		AppxManifest.xml = AppxManifest.xml
-		build.bat = build.bat
-		CreateLayout.prj = CreateLayout.prj
-	EndProjectSection
-EndProject
 Project("{365BE41E-7993-430D-A5E6-1381A54BC077}") = "RidoClassicApp.Appx", "RidoClassicApp.Appx\RidoClassicApp.Appx.vsdproj", "{8EE91EF8-2DB9-434C-AF8C-6FB1C0088DE1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FFBED8FC-EB02-4859-860E-26629F7F9D15} = {FFBED8FC-EB02-4859-860E-26629F7F9D15}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

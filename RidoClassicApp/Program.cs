@@ -15,11 +15,13 @@ namespace RidoClassicApp
         [STAThread]
         static void Main()
         {
-            SetInstalledDate();
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainForm());
+            SetInstalledDate();
         }
+        
 
         private static void SetInstalledDate()
         {

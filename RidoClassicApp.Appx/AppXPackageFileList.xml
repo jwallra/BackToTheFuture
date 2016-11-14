@@ -8,6 +8,9 @@
     <LayoutFile Include="$(MyProjectOutputPath)\$(Configuration)\RidoClassicApp.exe">
       <PackagePath>$(PackageLayout)\RidoClassicApp.exe</PackagePath>
     </LayoutFile>
+    <LayoutFile Include="$(MyProjectOutputPath)\$(Configuration)\DateTimeExtensions.dll">
+      <PackagePath>$(PackageLayout)\DateTimeExtensions.dll</PackagePath>
+    </LayoutFile>
   </ItemGroup>
 
 </Project>

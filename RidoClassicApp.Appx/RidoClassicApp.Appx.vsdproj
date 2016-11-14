@@ -41,6 +41,7 @@
     <None Include="AppXPackageFileList.xml">
       <SubType>Designer</SubType>
     </None>
+    <None Include="makeappx.bat" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Layout\AppxManifest.xml" />
