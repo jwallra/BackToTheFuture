@@ -16,16 +16,16 @@ namespace RidoClassicApp
         {
             label1.Text = $"Application Installed {Properties.Settings.Default.InstalledOn.ToString()} \r\n";
             label1.Text += $"Opened {Properties.Settings.Default.TimesOpened} times. Last time {Properties.Settings.Default.LastOpened}\r\n";
-            label1.Text += $"Current user: {Thread.CurrentPrincipal.Identity.Name}";
-
+            
             label2.Text = $"Installed in {Assembly.GetExecutingAssembly().Location} \r\n";
+
             try
             {
-                label2.Text += $"App info {Windows.ApplicationModel.Package.Current?.DisplayName}";
+                label3.Text += $"App info {Windows.ApplicationModel.Package.Current?.DisplayName}";
             }
             catch
             {
-                label2.Text += $"App info not found";
+                label3.Text += $"App info not found";
             }
 
 

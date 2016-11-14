@@ -22,7 +22,7 @@
          <rescap:Capability Name="runFullTrust" />
       </Capabilities>
       <Applications>
-        <Application Id="MyDesktopAppStep1" Executable="RidoClassicApp.exe" 
+        <Application Id="RidoClassicAppStep1" Executable="RidoClassicApp.exe" 
                                 EntryPoint="Windows.FullTrustApplication">
           <uap:VisualElements DisplayName="RidoClassicApp1" 
                               Description="RidoClassicApp1" 
