@@ -1,11 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.25906.0
+VisualStudioVersion = 15.0.25914.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RidoClassicApp", "RidoClassicApp\RidoClassicApp.csproj", "{FFBED8FC-EB02-4859-860E-26629F7F9D15}"
 EndProject
-Project("{365BE41E-7993-430D-A5E6-1381A54BC077}") = "RidoClassicApp.Appx", "RidoClassicApp.Appx\RidoClassicApp.Appx.vsdproj", "{8EE91EF8-2DB9-434C-AF8C-6FB1C0088DE1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RidoClassicApp.Appx", "RidoClassicApp.Appx\RidoClassicApp.Appx.vsdproj", "{8EE91EF8-2DB9-434C-AF8C-6FB1C0088DE1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FFBED8FC-EB02-4859-860E-26629F7F9D15} = {FFBED8FC-EB02-4859-860E-26629F7F9D15}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RidoClassicApp.Package", "RidoClassicApp.Package\RidoClassicApp.Package.csproj", "{CD2FD73A-99BF-465F-9477-C3387FF158F4}"
 	ProjectSection(ProjectDependencies) = postProject
 		{FFBED8FC-EB02-4859-860E-26629F7F9D15} = {FFBED8FC-EB02-4859-860E-26629F7F9D15}
 	EndProjectSection
@@ -62,6 +67,27 @@ Global
 		{8EE91EF8-2DB9-434C-AF8C-6FB1C0088DE1}.Release|x86.ActiveCfg = Release|x86
 		{8EE91EF8-2DB9-434C-AF8C-6FB1C0088DE1}.Release|x86.Build.0 = Release|x86
 		{8EE91EF8-2DB9-434C-AF8C-6FB1C0088DE1}.Release|x86.Deploy.0 = Release|x86
+		{CD2FD73A-99BF-465F-9477-C3387FF158F4}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{CD2FD73A-99BF-465F-9477-C3387FF158F4}.Debug|Any CPU.Build.0 = Debug|x86
+		{CD2FD73A-99BF-465F-9477-C3387FF158F4}.Debug|ARM.ActiveCfg = Debug|ARM
+		{CD2FD73A-99BF-465F-9477-C3387FF158F4}.Debug|ARM.Build.0 = Debug|ARM
+		{CD2FD73A-99BF-465F-9477-C3387FF158F4}.Debug|ARM.Deploy.0 = Debug|ARM
+		{CD2FD73A-99BF-465F-9477-C3387FF158F4}.Debug|x64.ActiveCfg = Debug|x64
+		{CD2FD73A-99BF-465F-9477-C3387FF158F4}.Debug|x64.Build.0 = Debug|x64
+		{CD2FD73A-99BF-465F-9477-C3387FF158F4}.Debug|x64.Deploy.0 = Debug|x64
+		{CD2FD73A-99BF-465F-9477-C3387FF158F4}.Debug|x86.ActiveCfg = Debug|x86
+		{CD2FD73A-99BF-465F-9477-C3387FF158F4}.Debug|x86.Build.0 = Debug|x86
+		{CD2FD73A-99BF-465F-9477-C3387FF158F4}.Debug|x86.Deploy.0 = Debug|x86
+		{CD2FD73A-99BF-465F-9477-C3387FF158F4}.Release|Any CPU.ActiveCfg = Release|x86
+		{CD2FD73A-99BF-465F-9477-C3387FF158F4}.Release|ARM.ActiveCfg = Release|ARM
+		{CD2FD73A-99BF-465F-9477-C3387FF158F4}.Release|ARM.Build.0 = Release|ARM
+		{CD2FD73A-99BF-465F-9477-C3387FF158F4}.Release|ARM.Deploy.0 = Release|ARM
+		{CD2FD73A-99BF-465F-9477-C3387FF158F4}.Release|x64.ActiveCfg = Release|x64
+		{CD2FD73A-99BF-465F-9477-C3387FF158F4}.Release|x64.Build.0 = Release|x64
+		{CD2FD73A-99BF-465F-9477-C3387FF158F4}.Release|x64.Deploy.0 = Release|x64
+		{CD2FD73A-99BF-465F-9477-C3387FF158F4}.Release|x86.ActiveCfg = Release|x86
+		{CD2FD73A-99BF-465F-9477-C3387FF158F4}.Release|x86.Build.0 = Release|x86
+		{CD2FD73A-99BF-465F-9477-C3387FF158F4}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -261,3 +261,5 @@ __pycache__/
 *.pyc
 
 *.appx
+*\win32
+*\BundleFiles

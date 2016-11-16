@@ -41,12 +41,9 @@
     <None Include="AppXPackageFileList.xml">
       <SubType>Designer</SubType>
     </None>
-    <None Include="CreateAppx.bat" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Layout\AppxManifest.xml" />
-    <Content Include="Layout\Assets\SampleAppx.150x150.png" />
-    <Content Include="Layout\Assets\SampleAppx.44x44.png" />
+    <Folder Include="Layout\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">15.0</VisualStudioVersion>

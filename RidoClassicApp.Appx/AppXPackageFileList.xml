@@ -2,14 +2,14 @@
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   
   <PropertyGroup>
-    <MyProjectOutputPath>$(PackageLayout)\..\..\RidoClassicApp\bin\</MyProjectOutputPath>
+    <MyProjectOutputPath>$(PackageLayout)</MyProjectOutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <LayoutFile Include="$(MyProjectOutputPath)\$(Configuration)\RidoClassicApp.exe">
-      <PackagePath>$(PackageLayout)\RidoClassicApp.exe</PackagePath>
+    <LayoutFile Include="$(MyProjectOutputPath)\win32\RidoClassicApp.exe">
+      <PackagePath>$(PackageLayout)\win32\RidoClassicApp.exe</PackagePath>
     </LayoutFile>
-    <LayoutFile Include="$(MyProjectOutputPath)\$(Configuration)\DateTimeExtensions.dll">
-      <PackagePath>$(PackageLayout)\DateTimeExtensions.dll</PackagePath>
+    <LayoutFile Include="$(MyProjectOutputPath)\win32\DateTimeExtensions.dll">
+      <PackagePath>$(PackageLayout)\win32\DateTimeExtensions.dll</PackagePath>
     </LayoutFile>
   </ItemGroup>
 
