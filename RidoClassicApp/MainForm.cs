@@ -15,19 +15,12 @@ namespace RidoClassicApp
         private void MainForm_Load(object sender, EventArgs e)
         {
             ShowInstallData();
-        }
 
+        }
 
         private void ShowInstallData()
         {
-            if (Properties.Settings.Default.InstalledOn > DateTime.MinValue)
-            {
-                label1.Text = $"Application Installed {DateTime.Now.ToNaturalText(Properties.Settings.Default.InstalledOn)} ago\r\n";
-            }
-            else
-            {
-                label1.Text = "First Run";
-            }
+            label1.Text = $"Application Installed {DateTime.Now.ToNaturalText(Properties.Settings.Default.InstalledOn)} ago\r\n";
             label1.Text += $"Used {Properties.Settings.Default.TimesOpened} times.";
             if (Properties.Settings.Default.LastOpened > DateTime.MinValue)
             {
@@ -35,11 +28,11 @@ namespace RidoClassicApp
             }
             label2.Text = $"{Assembly.GetExecutingAssembly().FullName} \r\n";
 
-            //toolTip1.SetToolTip(label2, Assembly.GetExecutingAssembly().Location);
+            toolTip1.SetToolTip(label2, Assembly.GetExecutingAssembly().Location);
 
             try
             {
-                // label3.Text = $"App info {Windows.ApplicationModel.Package.Current?.Id}";
+               label3.Text = $"App info {Windows.ApplicationModel.Package.Current?.Id.FamilyName}";
             }
             catch
             {
