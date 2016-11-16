@@ -19,7 +19,7 @@ namespace RidoClassicApp
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainForm());
-            SetInstalledDate();
+            //SetInstalledDate();
         }
         
 

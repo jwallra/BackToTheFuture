@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities" IgnorableNamespaces="uap mp rescap">
-  <Identity Name="RidoClassicApp" Publisher="CN=CertToTestApps" Version="0.1.4.0" />
+  <Identity Name="RidoClassicApp1" Publisher="CN=CertToTestApps" Version="0.1.3.0" />
   <mp:PhoneIdentity PhoneProductId="1c55d14c-16c1-4ab2-abad-006ca80ade0a" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>RidoClassicApp</DisplayName>
+    <DisplayName>1RidoClassicApp</DisplayName>
     <PublisherDisplayName>Rido</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
@@ -14,8 +14,8 @@
     <Resource Language="en-us" />
   </Resources>
   <Applications>
-    <Application Id="RidoClassicApp" Executable="win32\RidoClassicApp.exe" EntryPoint="Windows.FullTrusApplication">
-      <uap:VisualElements DisplayName="RidoClassicApp" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="RidoClassicApp Converted" BackgroundColor="transparent">
+    <Application Id="RidoClassicApp1" Executable="win32\RidoClassicApp.exe" EntryPoint="Windows.FullTrusApplication">
+      <uap:VisualElements DisplayName="1RidoClassicApp" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="1RidoClassicApp" BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png">
         </uap:DefaultTile>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
