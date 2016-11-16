@@ -14,7 +14,7 @@
     <Resource Language="en-us" />
   </Resources>
   <Applications>
-    <Application Id="RidoClassicApp1" Executable="win32\RidoClassicApp.exe" EntryPoint="Windows.FullTrusApplication">
+    <Application Id="RidoClassicApp1" Executable="win32\RidoClassicApp.exe" EntryPoint="Windows.FullTrustApplication">
       <uap:VisualElements DisplayName="1RidoClassicApp" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="1RidoClassicApp" BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png">
         </uap:DefaultTile>

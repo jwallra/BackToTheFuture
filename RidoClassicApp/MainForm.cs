@@ -14,7 +14,7 @@ namespace RidoClassicApp
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            //ShowInstallData();
+            ShowInstallData();
 
         }
 
@@ -32,7 +32,7 @@ namespace RidoClassicApp
 
             try
             {
-               // label3.Text = $"App info {Windows.ApplicationModel.Package.Current?.Id}";
+               label3.Text = $"App info {Windows.ApplicationModel.Package.Current?.Id.FamilyName}";
             }
             catch
             {
