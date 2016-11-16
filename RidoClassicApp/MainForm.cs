@@ -14,23 +14,37 @@ namespace RidoClassicApp
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            label1.Text = $"Application Installed {Properties.Settings.Default.InstalledOn.ToString()} \r\n";
-            label1.Text += $"Opened {Properties.Settings.Default.TimesOpened} times.";
-            label1.Text += $" Last time {DateTime.Now.ToNaturalText(Properties.Settings.Default.LastOpened)}\r\n";
-            
-            label2.Text = $"Installed in {Assembly.GetExecutingAssembly().Location} \r\n";
+            ShowInstallData();
+        }
+
+
+        private void ShowInstallData()
+        {
+            if (Properties.Settings.Default.InstalledOn > DateTime.MinValue)
+            {
+                label1.Text = $"Application Installed {DateTime.Now.ToNaturalText(Properties.Settings.Default.InstalledOn)} ago\r\n";
+            }
+            else
+            {
+                label1.Text = "First Run";
+            }
+            label1.Text += $"Used {Properties.Settings.Default.TimesOpened} times.";
+            if (Properties.Settings.Default.LastOpened > DateTime.MinValue)
+            {
+                label1.Text += $"{DateTime.Now.ToNaturalText(Properties.Settings.Default.LastOpened)} seconds ago\r\n";
+            }
+            label2.Text = $"{Assembly.GetExecutingAssembly().FullName} \r\n";
+
+            //toolTip1.SetToolTip(label2, Assembly.GetExecutingAssembly().Location);
 
             try
             {
-                label3.Text += $"App info {Windows.ApplicationModel.Package.Current?.DisplayName}";
+                // label3.Text = $"App info {Windows.ApplicationModel.Package.Current?.Id}";
             }
             catch
             {
-                label3.Text += $"App info not found";
+                label3.Text = $"Classic Mode";
             }
-
-
-
         }
     }
 }
