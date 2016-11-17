@@ -20,6 +20,14 @@ namespace RidoClassicApp
 
         private void ShowInstallData()
         {
+            if (Properties.Settings.Default.InstalledOn == DateTime.MinValue)
+            {
+                label1.Text = "First Run";
+            }
+            else
+            {
+                label1.Text = $"Application Installed {DateTime.Now.ToNaturalText(Properties.Settings.Default.InstalledOn)} ago\r\n";
+            }
             label1.Text = $"Application Installed {DateTime.Now.ToNaturalText(Properties.Settings.Default.InstalledOn)} ago\r\n";
             label1.Text += $"Used {Properties.Settings.Default.TimesOpened} times.";
             if (Properties.Settings.Default.LastOpened > DateTime.MinValue)
