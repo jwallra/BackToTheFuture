@@ -37,7 +37,7 @@ namespace RidoClassicApp
             label2.Text = $"{Assembly.GetExecutingAssembly().FullName} \r\n";
 
             toolTip1.SetToolTip(label2, Assembly.GetExecutingAssembly().Location);
-
+            
             try
             {
                label3.Text = $"App info {Windows.ApplicationModel.Package.Current?.Id.FamilyName}";
@@ -46,6 +46,8 @@ namespace RidoClassicApp
             {
                 label3.Text = $"Classic Mode";
             }
+
+            label4.Text = "Running in " + IntPtr.Size;
         }
     }
 }

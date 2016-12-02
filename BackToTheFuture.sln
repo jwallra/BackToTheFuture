@@ -8,6 +8,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RidoClassicApp.Appx", "RidoClassicApp.Appx\RidoClassicApp.Appx.vsdproj", "{8EE91EF8-2DB9-434C-AF8C-6FB1C0088DE1}"
 EndProject
 Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "RidoClassicAppx", "RidoClassicAppx\RidoClassicAppx.jsproj", "{2DFCA7A6-5AA7-43E3-AD57-0F8C4242DB86}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FFBED8FC-EB02-4859-860E-26629F7F9D15} = {FFBED8FC-EB02-4859-860E-26629F7F9D15}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
