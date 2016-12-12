@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <TabControl HorizontalAlignment="Left" Height="247" Margin="20,19,0,0" VerticalAlignment="Top" Width="458">
+        <TabControl HorizontalAlignment="Left" Height="274" Margin="20,19,0,0" VerticalAlignment="Top" Width="487">
             <TabItem Header="Intro" Loaded="TabItem_Loaded">
                 <Grid Background="#FFE5E5E5">
                     <Grid.RowDefinitions>
@@ -16,7 +16,7 @@
                     </Grid.RowDefinitions>
                     <TextBlock Grid.Row="0" Text="Runtime Info" FontFamily="Arial" FontSize="25" Padding="10" />
                     <StackPanel Grid.Row="1" >
-                        <TextBlock x:Name="labelPath" Margin="5" TextWrapping="Wrap" Height="38"/>
+                        <TextBlock x:Name="labelPath" Margin="5" TextWrapping="Wrap" Height="Auto"/>
                         <TextBlock x:Name="labelVersion" Margin="5"/>
                         <TextBlock x:Name="labelAppx" Margin="5"/>
                     </StackPanel>
