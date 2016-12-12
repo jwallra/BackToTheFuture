@@ -16,18 +16,22 @@
                     </Grid.RowDefinitions>
                     <TextBlock Grid.Row="0" Text="Runtime Info" FontFamily="Arial" FontSize="25" Padding="10" />
                     <StackPanel Grid.Row="1" >
-                        <TextBlock x:Name="labelPath" Margin="15" TextWrapping="Wrap" Height="38"/>
-                        <TextBlock x:Name="labelVersion" Margin="15"/>
-                        <TextBlock x:Name="labelAppx" Margin="15"/>
+                        <TextBlock x:Name="labelPath" Margin="5" TextWrapping="Wrap" Height="38"/>
+                        <TextBlock x:Name="labelVersion" Margin="5"/>
+                        <TextBlock x:Name="labelAppx" Margin="5"/>
                     </StackPanel>
                 </Grid>
             </TabItem>
-            <TabItem Header="COM">
+            <TabItem Header="COM" Loaded="TabItem_Loaded_1">
                 <Grid Background="#FFE5E5E5">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="60" />
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Text="COM Interop" FontFamily="Arial" FontSize="25" Padding="10" />
+                    <StackPanel Grid.Row="1">
+                        <TextBlock x:Name="labelCOMInfo" TextWrapping="Wrap" Height="86"/>
+                    </StackPanel>
                 </Grid>
             </TabItem>
         </TabControl>

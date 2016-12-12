@@ -51,5 +51,21 @@ namespace RidoClassicWPF
             }
             return pfn;
         }
+
+        private void TabItem_Loaded_1(object sender, RoutedEventArgs e)
+        {
+            string result = string.Empty;
+            try
+            {
+                var o = new ClassicCOM.MyClassClass();
+                result = o.GetInfo();
+            }
+            catch(Exception ex)
+            {
+                result = ex.Message;
+            }
+            labelCOMInfo.Text = result;
+
+        }
     }
 }
