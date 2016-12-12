@@ -7,15 +7,20 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <TabControl HorizontalAlignment="Left" Height="274" Margin="20,19,0,0" VerticalAlignment="Top" Width="487">
+        <TabControl HorizontalAlignment="Left" Height="274"  VerticalAlignment="Top" 
+                      Width="{Binding RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type Grid}},Path=ActualWidth}">
             <TabItem Header="Intro" Loaded="TabItem_Loaded">
                 <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="129*"/>
+                        <ColumnDefinition Width="352*"/>
+                    </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="60" />
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
-                    <TextBlock Grid.Row="0" Text="Runtime Info" FontFamily="Arial" FontSize="25" Padding="10" />
-                    <StackPanel Grid.Row="1" >
+                    <TextBlock Grid.Row="0" Text="Runtime Info" FontFamily="Arial" FontSize="25" Padding="10" Grid.ColumnSpan="2" />
+                    <StackPanel Grid.Row="1" Grid.ColumnSpan="2" >
                         <TextBlock x:Name="labelPath" Margin="5" TextWrapping="Wrap" Height="Auto"/>
                         <TextBlock x:Name="labelVersion" Margin="5"/>
                         <TextBlock x:Name="labelAppx" Margin="5"/>
