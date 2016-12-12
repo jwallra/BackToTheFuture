@@ -39,6 +39,18 @@
                     </StackPanel>
                 </Grid>
             </TabItem>
+            <TabItem Header="Notifications">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Text="Notifications" FontFamily="Arial" FontSize="25" Padding="10" />
+                    <StackPanel Grid.Row="1">
+                        <Button x:Name="buttonShowToast" Click="buttonShowToast_Click" Content="Show Toast Notification" />
+                    </StackPanel>
+                </Grid>
+            </TabItem>
         </TabControl>
 
     </Grid>

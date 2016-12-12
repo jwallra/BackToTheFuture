@@ -13,6 +13,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Windows.Data.Xml.Dom;
+using Windows.UI.Notifications;
 
 namespace RidoClassicWPF
 {
@@ -66,6 +68,23 @@ namespace RidoClassicWPF
             }
             labelCOMInfo.Text = result;
 
+        }
+
+        private void buttonShowToast_Click(object sender, RoutedEventArgs e)
+        {
+            var o = new ClassicCOM.MyClassClass();
+            ShowToast(o.Salute("UWP"));
+        }
+
+        private void ShowToast(string msg)
+        {
+            ToastTemplateType toastTemplate = ToastTemplateType.ToastText02;
+            XmlDocument toastXml = ToastNotificationManager.GetTemplateContent(toastTemplate);
+            XmlNodeList toastTextElements = toastXml.GetElementsByTagName("text");
+            toastTextElements[0].AppendChild(toastXml.CreateTextNode(msg));
+            toastTextElements[1].AppendChild(toastXml.CreateTextNode(DateTime.Now.ToString()));
+            ToastNotification toast = new ToastNotification(toastXml);
+            ToastNotificationManager.CreateToastNotifier().Show(toast);
         }
     }
 }
