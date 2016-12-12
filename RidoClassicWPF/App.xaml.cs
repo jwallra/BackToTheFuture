@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.HockeyApp;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -13,5 +14,9 @@ namespace RidoClassicWPF
     /// </summary>
     public partial class App : Application
     {
+        public App()
+        {
+            HockeyClient.Current.Configure("fcc565b312a544479688a3e34afeab1c");
+        }
     }
 }
