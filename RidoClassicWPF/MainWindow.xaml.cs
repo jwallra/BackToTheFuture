@@ -81,5 +81,18 @@ namespace RidoClassicWPF
             ToastNotification toast = new ToastNotification(toastXml);
             ToastNotificationManager.CreateToastNotifier().Show(toast);
         }
+
+        private void buttonHandledException_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                throw new InvalidOperationException("Fake IVO exception");
+            }
+            catch (Exception ex)
+            {
+                (HockeyClient.Current as HockeyClient).HandleException(ex);
+                // Environment.Exit(-1);
+            }
+        }
     }
 }
