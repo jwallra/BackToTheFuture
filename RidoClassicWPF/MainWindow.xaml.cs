@@ -82,17 +82,50 @@ namespace RidoClassicWPF
             ToastNotificationManager.CreateToastNotifier().Show(toast);
         }
 
+        private void MethodFailing()
+        {
+            throw new InvalidOperationException("Fake IVO exception");
+        }
+
+        private void UnhandledEx_Click(object sender, RoutedEventArgs e)
+        {
+            MethodFailing();
+        }
+
         private void buttonHandledException_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                throw new InvalidOperationException("Fake IVO exception");
+                MethodFailing();
             }
             catch (Exception ex)
             {
+                MessageBox.Show(ex.Message);
                 (HockeyClient.Current as HockeyClient).HandleException(ex);
                 // Environment.Exit(-1);
             }
         }
+
+        private void COMException_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                var o = new ClassicCOM.MyClassClass();
+                o.MakeMeFail();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, ex.HResult.ToString());
+                (HockeyClient.Current as HockeyClient).HandleException(ex);
+            }
+        }
+
+        private void UnhandledCOMException_Click(object sender, RoutedEventArgs e)
+        {
+            var o = new ClassicCOM.MyClassClass();
+            o.MakeMeFail();
+        }
+
+        
     }
 }

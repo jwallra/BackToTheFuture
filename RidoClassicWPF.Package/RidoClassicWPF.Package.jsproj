@@ -62,17 +62,17 @@
     <AppxManifest Include="package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
-    <Content Include="Assets\*.png" />    
+    <Content Include="Assets\*.png" />
     <Content Include="images\*.png" />
     <Content Include="lib\DesktopBridge.ClassicCOM.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Package.StoreAssociation.xml" />
+    <Content Include="lib\DesktopBridge.ClassicCOM.pdb" />
     <Content Include="Registry.dat">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="RidoClassicWPF.Package_StoreKey.pfx" />
-    
     <Content Include="win32\*.dll" Exclude="win32\System.*.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -85,7 +85,6 @@
     <Content Include="win32\*.pdb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    
     <None Include="RidoClassicWPF.Package_TemporaryKey.pfx" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).targets" />

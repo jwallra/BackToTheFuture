@@ -58,8 +58,11 @@
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
                     <TextBlock Grid.Row="0" Text="Crashes" FontFamily="Arial" FontSize="25" Padding="10" />
-                    <StackPanel Grid.Row="1">
-                        <Button x:Name="buttonHandledException" Click="buttonHandledException_Click" Content="HandledException" />
+                    <StackPanel Grid.Row="1" Width="300" Margin="5">
+                        <Button Click="UnhandledEx_Click" Content="Unhandled Exception" Margin="5"/>
+                        <Button Click="buttonHandledException_Click" Content="HandledException" Margin="5"/>
+                        <Button Click="COMException_Click" Content="Handled COM Err" Margin="5"/>
+                        <Button Click="UnhandledCOMException_Click" Content="UnHandled COM Err" Margin="5" />
                     </StackPanel>
                 </Grid>
             </TabItem>
