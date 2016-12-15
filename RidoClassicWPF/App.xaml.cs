@@ -14,9 +14,12 @@ namespace RidoClassicWPF
     /// </summary>
     public partial class App : Application
     {
-        public App()
+        protected async override void OnStartup(StartupEventArgs e)
         {
+            base.OnStartup(e);
             HockeyClient.Current.Configure("fcc565b312a544479688a3e34afeab1c");
+            await HockeyClient.Current.SendCrashesAsync();
         }
+        
     }
 }
