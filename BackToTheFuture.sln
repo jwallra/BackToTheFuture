@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RidoClassicWPF", "RidoClassicWPF\RidoClassicWPF.csproj", "{66E750A2-BCDC-4486-8252-8BF0693F2F25}"
 EndProject
 Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "RidoClassicWPF.Package", "RidoClassicWPF.Package\RidoClassicWPF.Package.jsproj", "{46C707A0-C703-444F-A848-3181409242F1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{66E750A2-BCDC-4486-8252-8BF0693F2F25} = {66E750A2-BCDC-4486-8252-8BF0693F2F25}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
