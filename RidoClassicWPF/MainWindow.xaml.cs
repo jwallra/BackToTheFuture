@@ -69,6 +69,7 @@ namespace RidoClassicWPF
             var result = o.Salute("UWP");
             ShowToast(result);
             HockeyClient.Current.TrackEvent("ShowToast: " + result);
+            
         }
 
         private void ShowToast(string msg)
