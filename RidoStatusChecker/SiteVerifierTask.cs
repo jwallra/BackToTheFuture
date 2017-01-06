@@ -14,29 +14,49 @@ namespace RidoStatusChecker
 {
     public sealed class SiteVerifierTask : IBackgroundTask
     {
-        public  void Run(IBackgroundTaskInstance taskInstance)
+        public  async void Run(IBackgroundTaskInstance taskInstance)
         {
+            BackgroundTaskDeferral deferral = taskInstance.GetDeferral();
+
             var msg = string.Empty;
-            var url = ApplicationData.Current.LocalSettings.Values["UrlToVerify"] as string;
-            if (string.IsNullOrEmpty(url))
-            {
-                url = "http://dev.windows.com";
-                msg = "Using default URL. " + url;
-            }
-            else
-            {
-                msg = "Using URL. " + url;
-            }
-            var time = TimeToFirstByte(url);
-            msg += $"took {time.ToString()} ms";
+            msg = await MeasureRequestTime();
             ShowToast(msg);
+
+            deferral.Complete();
+
         }
 
-        private long TimeToFirstByte(string url)
+        private async Task<string> MeasureRequestTime()
+        {
+            string msg;
+            try
+            {
+                var url = ApplicationData.Current.LocalSettings.Values["UrlToVerify"] as string;
+                if (string.IsNullOrEmpty(url))
+                {
+                    url = "http://dev.windows.com";
+                    msg = "Using default URL. " + url;
+                }
+                else
+                {
+                    msg = "Using URL. " + url;
+                }
+                var time = await TimeToFirstByte(url);
+                msg += $"took {time.ToString()} ms";
+            }
+            catch (Exception ex)
+            {
+                msg = ex.Message;
+            }
+
+            return msg;
+        }
+
+        private async Task<long> TimeToFirstByte(string url)
         {
             Stopwatch clock = Stopwatch.StartNew();
             var http = new HttpClient();
-            var response = http.GetAsync(url).GetAwaiter().GetResult();
+            var response = await http.GetAsync(url);
             response.EnsureSuccessStatusCode();
             var elapsed = clock.ElapsedMilliseconds;
             clock.Stop();
