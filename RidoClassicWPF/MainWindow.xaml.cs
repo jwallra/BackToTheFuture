@@ -3,6 +3,7 @@ using System;
 using System.Reflection;
 using System.Windows;
 using Windows.Data.Xml.Dom;
+using Windows.Storage;
 using Windows.UI.Notifications;
 
 namespace RidoClassicWPF
@@ -14,6 +15,7 @@ namespace RidoClassicWPF
     {
         public MainWindow()
         {
+            
             HockeyClient.Current.TrackPageView("MainPage");
             InitializeComponent();
 
@@ -127,6 +129,14 @@ namespace RidoClassicWPF
             o.MakeMeFail();
         }
 
-        
+        private void buttonAddUrl_Click(object sender, RoutedEventArgs e)
+        {
+            ApplicationData.Current.LocalSettings.Values["UrlToVerify"] = UrlToTest.Text;
+        }
+
+        private void TabItem_Loaded_2(object sender, RoutedEventArgs e)
+        {
+            UrlToTest.Text = ApplicationData.Current.LocalSettings.Values["UrlToVerify"] as string;
+        }
     }
 }
