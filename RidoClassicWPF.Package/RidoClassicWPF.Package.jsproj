@@ -911,8 +911,12 @@
     <Content Include="win32\ClassicCOM.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="win32\Microsoft.HockeyApp.Core45.dll" />
-    <Content Include="win32\Microsoft.HockeyApp.Kit.dll" />
+    <Content Include="win32\Microsoft.HockeyApp.Core45.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="win32\Microsoft.HockeyApp.Kit.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="win32\RidoClassicWPF.exe">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
