@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.ApplicationModel.Background;
 using Windows.Data.Xml.Dom;
 using Windows.Storage;
 using Windows.UI.Notifications;
+using Windows.Web.Http;
 
 namespace RidoStatusChecker
 {
@@ -56,7 +56,7 @@ namespace RidoStatusChecker
         {
             Stopwatch clock = Stopwatch.StartNew();
             var http = new HttpClient();
-            var response = await http.GetAsync(url);
+            var response = await http.GetAsync(new Uri(url));
             response.EnsureSuccessStatusCode();
             var elapsed = clock.ElapsedMilliseconds;
             clock.Stop();
