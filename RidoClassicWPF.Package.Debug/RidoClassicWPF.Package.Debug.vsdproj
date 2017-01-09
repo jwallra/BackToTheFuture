@@ -33,6 +33,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
     <OutputPath>bin\AnyCPU\Release\</OutputPath>
+    <PackageLayout>..\RidoClassicWPF.Package\bin\release</PackageLayout>
+    <StartupTile>RidoClassicWPF</StartupTile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
     <DefineConstants>DEBUG</DefineConstants>
