@@ -18,7 +18,7 @@ namespace RidoClassicWPF
         {
             base.OnStartup(e);
             HockeyClient.Current.Configure("fcc565b312a544479688a3e34afeab1c");
-            await HockeyClient.Current.SendCrashesAsync();
+            //await HockeyClient.Current.SendCrashesAsync();
         }
         
     }
