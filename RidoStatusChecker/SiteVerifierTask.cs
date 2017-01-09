@@ -32,17 +32,8 @@ namespace RidoStatusChecker
             try
             {
                 var url = ApplicationData.Current.LocalSettings.Values["UrlToVerify"] as string;
-                if (string.IsNullOrEmpty(url))
-                {
-                    url = "http://dev.windows.com";
-                    msg = "Using default URL. " + url;
-                }
-                else
-                {
-                    msg = "Using URL. " + url;
-                }
                 var time = await TimeToFirstByte(url);
-                msg += $"took {time.ToString()} ms";
+                msg = $"{url} took {time.ToString()} ms";
             }
             catch (Exception ex)
             {

@@ -1,9 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26106.3
+VisualStudioVersion = 15.0.26020.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RidoClassicWPF", "RidoClassicWPF\RidoClassicWPF.csproj", "{66E750A2-BCDC-4486-8252-8BF0693F2F25}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1B265F44-0DCB-46CA-BD7F-2726E5BEB2B3} = {1B265F44-0DCB-46CA-BD7F-2726E5BEB2B3}
+	EndProjectSection
 EndProject
 Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "RidoClassicWPF.Package", "RidoClassicWPF.Package\RidoClassicWPF.Package.jsproj", "{46C707A0-C703-444F-A848-3181409242F1}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -12,7 +15,7 @@ Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "RidoClassicWPF.Package", "R
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RidoStatusChecker", "RidoStatusChecker\RidoStatusChecker.csproj", "{1B265F44-0DCB-46CA-BD7F-2726E5BEB2B3}"
 EndProject
-Project("{365BE41E-7993-430D-A5E6-1381A54BC077}") = "BTTF.Debug", "BTTF.Debug\BTTF.Debug.vsdproj", "{5A132C06-3FFD-49B6-8F40-3CF89327467B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BTTF.Debug", "BTTF.Debug\BTTF.Debug.vsdproj", "{5A132C06-3FFD-49B6-8F40-3CF89327467B}"
 	ProjectSection(ProjectDependencies) = postProject
 		{46C707A0-C703-444F-A848-3181409242F1} = {46C707A0-C703-444F-A848-3181409242F1}
 	EndProjectSection
