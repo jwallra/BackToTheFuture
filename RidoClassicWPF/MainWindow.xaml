@@ -51,6 +51,19 @@
                     </StackPanel>
                 </Grid>
             </TabItem>
+            <TabItem Header="BackgroundTimer" Loaded="TabItem_Loaded_2">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Text="Background Timer Config" FontFamily="Arial" FontSize="25" Padding="10" />
+                    <StackPanel Grid.Row="1">
+                        <TextBox x:Name="UrlToTest" Width="300" Text="http://dev.windows.com" />
+                        <Button x:Name="buttonAddUrl" Click="buttonAddUrl_Click" Content="Add Url To Test" />
+                    </StackPanel>
+                </Grid>
+            </TabItem>
             <TabItem Header="Crashes">
                 <Grid Background="#FFE5E5E5">
                     <Grid.RowDefinitions>
