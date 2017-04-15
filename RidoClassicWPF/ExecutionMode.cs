@@ -43,6 +43,11 @@ namespace RidoClassicWPF
         {
             get
             {
+                if (isWindows7OrLower())
+                {
+                    return false;
+                }
+
                 if (isAppx==null || !isAppx.HasValue)
                 { 
                     pfn = GetPackageNameIfAvailable();
@@ -55,6 +60,11 @@ namespace RidoClassicWPF
         {
             get
             {
+                if (isWindows7OrLower())
+                {
+                    return "No PFN avilable in this OS.";
+                }
+
                 if (!isAppx.HasValue)
                 {
                     pfn = GetPackageNameIfAvailable();
