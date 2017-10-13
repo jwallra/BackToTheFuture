@@ -10,11 +10,11 @@ using Windows.Storage;
 using Windows.UI.Notifications;
 using Windows.Web.Http;
 
-namespace RidoStatusChecker
+namespace HttpPing
 {
-    public sealed class SiteVerifierTask : IBackgroundTask
+    public sealed class SiteVerifier : IBackgroundTask
     {
-        public  async void Run(IBackgroundTaskInstance taskInstance)
+        public async void Run(IBackgroundTaskInstance taskInstance)
         {
             BackgroundTaskDeferral deferral = taskInstance.GetDeferral();
 

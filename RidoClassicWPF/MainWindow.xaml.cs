@@ -147,7 +147,7 @@ namespace RidoClassicWPF
             BackgroundTaskBuilder builder = new BackgroundTaskBuilder();
             builder.Name = triggerName;
             builder.SetTrigger(trigger);
-            builder.TaskEntryPoint = "RidoStatusChecker.SiteVerifierTask";
+            builder.TaskEntryPoint = "HttpPing.SiteVerifier";
             builder.Register();
         }
     }

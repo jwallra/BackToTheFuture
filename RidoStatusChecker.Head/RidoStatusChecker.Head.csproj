@@ -173,13 +173,13 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
-      <Version>6.0.0-preview1-25706-01</Version>
+      <Version>6.0.1</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RidoStatusChecker\RidoStatusChecker.csproj">
-      <Project>{1b265f44-0dcb-46ca-bd7f-2726e5beb2b3}</Project>
-      <Name>RidoStatusChecker</Name>
+    <ProjectReference Include="..\HttpPing\HttpPing.csproj">
+      <Project>{1ccf710a-072c-46ac-9d0f-b3b021288c46}</Project>
+      <Name>HttpPing</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

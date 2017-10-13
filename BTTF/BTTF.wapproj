@@ -125,8 +125,8 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\HttpPing.Head\HttpPing.Head.csproj" />
     <ProjectReference Include="..\RidoClassicWPF\RidoClassicWPF.csproj" />
-    <ProjectReference Include="..\RidoStatusChecker.Head\RidoStatusChecker.Head.csproj" />
   </ItemGroup>
   <Import Project="$(WapProjPath)\Microsoft.DesktopBridge.targets" />
 </Project>
