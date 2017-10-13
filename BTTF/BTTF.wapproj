@@ -35,8 +35,8 @@
   <Import Project="$(WapProjPath)\Microsoft.DesktopBridge.props" />
   <PropertyGroup>
     <ProjectGuid>fc069dc3-08ad-4eb9-b18c-e922e9d1ae64</ProjectGuid>
-    <TargetPlatformVersion>10.0.16278.0</TargetPlatformVersion>
-    <TargetPlatformMinVersion>10.0.15063.0</TargetPlatformMinVersion>
+    <TargetPlatformVersion>10.0.16299.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.14393.0</TargetPlatformMinVersion>
     <DefaultLanguage>en-US</DefaultLanguage>
     <PackageCertificateKeyFile>BTTF_StoreKey.pfx</PackageCertificateKeyFile>
     <PackageCertificateThumbprint>706156749C490818DD6DDF3A28BDC69D971F4029</PackageCertificateThumbprint>
