@@ -16,7 +16,7 @@
   <Properties>
     <DisplayName>HttpPing.Head</DisplayName>
     <PublisherDisplayName>rmpablos</PublisherDisplayName>
-    <Logo>Assets\StoreLogo.png</Logo>
+    <Logo>Assets2\StoreLogo.png</Logo>
   </Properties>
 
   <Dependencies>
