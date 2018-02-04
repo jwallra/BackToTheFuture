@@ -40,9 +40,9 @@
     <DefaultLanguage>en-US</DefaultLanguage>
     <PackageCertificateKeyFile>BTTF_StoreKey.pfx</PackageCertificateKeyFile>
     <EntryPointProjectUniqueName>..\RidoClassicWPF\RidoClassicWPF.csproj</EntryPointProjectUniqueName>
-    <PackageCertificateThumbprint>FED029A4A9BDD55A3B4EDB37488C81B8E2986E71</PackageCertificateThumbprint>
+    <PackageCertificateThumbprint>2AA05F02E0EAC70574DF8DE870B08BB663925566</PackageCertificateThumbprint>
     <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
-    <AppxBundlePlatforms>x86</AppxBundlePlatforms>
+    <AppxBundlePlatforms>x86|x64</AppxBundlePlatforms>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <AppxBundle>Always</AppxBundle>
