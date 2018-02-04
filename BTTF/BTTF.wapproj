@@ -123,6 +123,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\HttpPing.Head\HttpPing.Head.csproj" />
     <ProjectReference Include="..\RidoClassicWPF\RidoClassicWPF.csproj" />
   </ItemGroup>
   <Import Project="$(WapProjPath)\Microsoft.DesktopBridge.targets" />
