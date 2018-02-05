@@ -38,6 +38,7 @@ namespace HttpPing
             catch (Exception ex)
             {
                 msg = ex.Message;
+                throw;
             }
 
             return msg;
