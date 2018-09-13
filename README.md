@@ -7,7 +7,6 @@ To understand the different options you have check these docs:
 - [Desktop Bridge Info](https://developer.microsoft.com/en-us/windows/bridges/desktop)
 - [Packaging Guide](https://docs.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)
 
-To enable degugging you will need the [Desktp Bridge Debugging project extension](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.DesktoptoUWPPackagingProject)
 
 ## Overview
 
