@@ -1,4 +1,5 @@
-﻿using Microsoft.HockeyApp;
+﻿//using Microsoft.HockeyApp;
+using Microsoft.AppCenter.Analytics;
 using System;
 using System.Reflection;
 using System.Windows;
@@ -16,8 +17,8 @@ namespace RidoClassicWPF
     {
         public MainWindow()
         {
-            
-            HockeyClient.Current.TrackPageView("MainPage");
+            Analytics.TrackEvent("MainPage");
+            //HockeyClient.Current.TrackPageView("MainPage");
             InitializeComponent();
 
         }
@@ -30,7 +31,7 @@ namespace RidoClassicWPF
             labelPath.Text = a.CodeBase;           
             labelVersion.Text = $"AssemblyVersion {v.Major}.{v.Minor}.{v.Build}.{v.Revision} running on {a.ImageRuntimeVersion} RuntimeVersion";
             labelAppx.Text = ExecutionMode.PFN;
-            HockeyClient.Current.TrackEvent("RunTimeInfo:" + labelAppx.Text);
+            Analytics.TrackEvent("RunTimeInfo:" + labelAppx.Text);
         }
 
       
@@ -48,7 +49,7 @@ namespace RidoClassicWPF
                 result = ex.Message;
             }
             labelCOMInfo.Text = result;
-            HockeyClient.Current.TrackEvent("COMInfo: " + result);
+            Analytics.TrackEvent("COMInfo: " + result);
         }
 
         private void buttonShowToast_Click(object sender, RoutedEventArgs e)
@@ -59,7 +60,7 @@ namespace RidoClassicWPF
             {
                 ShowToast(result);
             }
-            HockeyClient.Current.TrackEvent("ShowToast: " + result);
+            Analytics.TrackEvent("ShowToast: " + result);
             
         }
 
@@ -93,7 +94,7 @@ namespace RidoClassicWPF
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                (HockeyClient.Current as HockeyClient).HandleException(ex);
+                Analytics.TrackEvent(ex.ToString());
                 // Environment.Exit(-1);
             }
         }
@@ -108,7 +109,7 @@ namespace RidoClassicWPF
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, ex.HResult.ToString());
-                (HockeyClient.Current as HockeyClient).HandleException(ex);
+                Analytics.TrackEvent(ex.ToString());
             }
         }
 
@@ -128,7 +129,7 @@ namespace RidoClassicWPF
         }
 
         private void TabItem_Loaded_2(object sender, RoutedEventArgs e)
-        {
+        {   
             buttonAddUrl.IsEnabled = ExecutionMode.IsAppx;
         }
 

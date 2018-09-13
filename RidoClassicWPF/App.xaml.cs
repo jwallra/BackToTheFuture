@@ -1,4 +1,6 @@
-﻿using Microsoft.HockeyApp;
+﻿using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+//using Microsoft.HockeyApp;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -19,8 +21,9 @@ namespace RidoClassicWPF
         {
             base.OnStartup(e);
           
-            HockeyClient.Current.Configure("fcc565b312a544479688a3e34afeab1c");
+            //HockeyClient.Current.Configure("fcc565b312a544479688a3e34afeab1c");
             //await HockeyClient.Current.SendCrashesAsync();
+            AppCenter.Start("5a6499b7-add4-4c26-a16b-909950329f63", typeof(Analytics));
         }
 
        
