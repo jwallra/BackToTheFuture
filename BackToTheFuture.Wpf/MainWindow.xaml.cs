@@ -8,13 +8,14 @@ using Windows.Data.Xml.Dom;
 using Windows.Storage;
 using Windows.UI.Notifications;
 
-namespace RidoClassicWPF
+namespace BackToTheFuture
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
+        UWPBackgroundTaskCatalog catalog = new UWPBackgroundTaskCatalog();
         public MainWindow()
         {
             Analytics.TrackEvent("MainPage");
@@ -123,33 +124,53 @@ namespace RidoClassicWPF
         {
             if (ExecutionMode.IsAppx)
             {
-                ApplicationData.Current.LocalSettings.Values["UrlToVerify"] = UrlToTest.Text;
-                RegisterBackgroundTask("BTTFTimeTrigger", new TimeTrigger(15, false));
+                LoadBackgroundTasks();
             }
         }
+
+        private void LoadBackgroundTasks()
+        {
+         
+            var registeredTasks = catalog.GetRegisteredTasks();
+            if (registeredTasks.Count == 0)
+            {
+                InfoBGTask.Text = "No BG Tasks Registered";
+                RegisterButton.IsEnabled = true;
+                UnregisterButton.IsEnabled = false;
+                return;
+            }
+            RegisterButton.IsEnabled = false;
+            UnregisterButton.IsEnabled = true;
+            InfoBGTask.Text = string.Empty;
+            foreach (var item in registeredTasks)
+            {
+                InfoBGTask.Text += item;
+            }
+            var url = ApplicationData.Current.LocalSettings.Values["UrlToVerify"].ToString();
+            if (!string.IsNullOrEmpty(url))
+            {
+                UrlToTest.Text = url;
+            }
+        }
+
 
         private void TabItem_Loaded_2(object sender, RoutedEventArgs e)
-        {   
-            buttonAddUrl.IsEnabled = ExecutionMode.IsAppx;
+        {
+
         }
 
-        public static void RegisterBackgroundTask(String triggerName, IBackgroundTrigger trigger)
+        private void RegisterButton_Click(object sender, RoutedEventArgs e)
         {
-            // Check if the task is already registered
-            foreach (var cur in BackgroundTaskRegistration.AllTasks)
-            {
-                if (cur.Value.Name == triggerName)
-                {
-                    // The task is already registered.
-                    return;
-                }
-            }
+            ApplicationData.Current.LocalSettings.Values["UrlToVerify"] = UrlToTest.Text;
+            catalog.RegisterBackgroundTask("MySampleTask");
+            LoadBackgroundTasks();
 
-            BackgroundTaskBuilder builder = new BackgroundTaskBuilder();
-            builder.Name = triggerName;
-            builder.SetTrigger(trigger);
-            builder.TaskEntryPoint = "HttpPing.SiteVerifier";
-            builder.Register();
+        }
+
+        private void UnregisterButton_Click(object sender, RoutedEventArgs e)
+        {
+            catalog.Unregister("MySampleTask");
+            LoadBackgroundTasks();
         }
     }
 }
