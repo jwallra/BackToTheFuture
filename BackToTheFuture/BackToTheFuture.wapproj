@@ -34,7 +34,7 @@
     <EntryPointProjectUniqueName>..\BackToTheFuture.Wpf\BackToTheFuture.Wpf.csproj</EntryPointProjectUniqueName>
     <PackageCertificateThumbprint>8452F37FAEDD20D1D49AC71D8F7F69228E4A609F</PackageCertificateThumbprint>
     <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
-    <AppxBundlePlatforms>x86|x64</AppxBundlePlatforms>
+    <AppxBundlePlatforms>x86</AppxBundlePlatforms>
     <GenerateAppInstallerFile>False</GenerateAppInstallerFile>
     <AppInstallerUpdateFrequency>1</AppInstallerUpdateFrequency>
     <AppInstallerCheckForUpdateFrequency>OnApplicationRun</AppInstallerCheckForUpdateFrequency>
