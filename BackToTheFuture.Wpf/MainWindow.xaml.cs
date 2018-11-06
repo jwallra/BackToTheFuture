@@ -21,12 +21,12 @@ namespace BackToTheFuture
             Analytics.TrackEvent("MainPage");
             //HockeyClient.Current.TrackPageView("MainPage");
             InitializeComponent();
+            Analytics.TrackEvent("MainPage");
 
         }
 
         private void TabItem_Loaded(object sender, RoutedEventArgs e)
         {
-            
             var a = Assembly.GetExecutingAssembly();
             var v = a.GetName().Version;
             labelPath.Text = a.CodeBase;           
@@ -120,17 +120,8 @@ namespace BackToTheFuture
             o.MakeMeFail();
         }
 
-        private void buttonAddUrl_Click(object sender, RoutedEventArgs e)
-        {
-            if (ExecutionMode.IsAppx)
-            {
-                LoadBackgroundTasks();
-            }
-        }
-
         private void LoadBackgroundTasks()
         {
-         
             var registeredTasks = catalog.GetRegisteredTasks();
             if (registeredTasks.Count == 0)
             {
@@ -156,7 +147,11 @@ namespace BackToTheFuture
 
         private void TabItem_Loaded_2(object sender, RoutedEventArgs e)
         {
-
+            if (ExecutionMode.IsAppx)
+            {
+                LoadBackgroundTasks();
+            }
+                
         }
 
         private void RegisterButton_Click(object sender, RoutedEventArgs e)
