@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Windows.ApplicationModel.Background;
 using Windows.Data.Xml.Dom;
@@ -17,12 +14,16 @@ namespace HttpPing
         public async void Run(IBackgroundTaskInstance taskInstance)
         {
             BackgroundTaskDeferral deferral = taskInstance.GetDeferral();
-
             var msg = string.Empty;
-            msg = await MeasureRequestTime();
-            ShowToast(msg);
-
-            deferral.Complete();
+            try
+            {
+                msg = await MeasureRequestTime();
+                ShowToast(msg);
+            }
+            finally
+            {
+                deferral.Complete();
+            }
 
         }
 
