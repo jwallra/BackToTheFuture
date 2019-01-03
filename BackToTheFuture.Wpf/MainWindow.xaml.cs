@@ -61,8 +61,9 @@ namespace BackToTheFuture
 
         private void buttonShowToast_Click(object sender, RoutedEventArgs e)
         {
-            var o = new ClassicCOM.MyClassClass();
-            var result = o.Salute("UWP");
+            //var o = new ClassicCOM.MyClassClass();
+            //var result = o.Salute("UWP");
+            var result = "Toast from WPF";
             if (ExecutionMode.IsAppx)
             {
                 ShowToast(result);
