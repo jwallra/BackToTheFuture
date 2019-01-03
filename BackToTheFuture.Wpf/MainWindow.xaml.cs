@@ -1,5 +1,5 @@
 ﻿//using Microsoft.HockeyApp;
-using Microsoft.AppCenter.Analytics;
+//using Microsoft.AppCenter.Analytics;
 using System;
 using System.Reflection;
 using System.Windows;
@@ -10,6 +10,12 @@ using Windows.UI.Notifications;
 
 namespace BackToTheFuture
 {
+
+    class Analytics
+    {
+        internal static void TrackEvent(string s) { }
+    }
+
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
