@@ -157,6 +157,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="HockeySDK.WPF">
+      <Version>4.1.6</Version>
+    </PackageReference>
     <PackageReference Include="Microsoft.DotNet.Framework.NativeImageCompiler">
       <Version>0.0.1-prerelease-00002</Version>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>

@@ -13,7 +13,15 @@ namespace BackToTheFuture
 
     class Analytics
     {
-        internal static void TrackEvent(string s) { }
+        internal static void TrackEvent(string s)
+        {
+            Microsoft.HockeyApp.HockeyClient.Current.TrackPageView(s);
+        }
+
+        internal static void TrackException(Exception ex)
+        {
+            Microsoft.HockeyApp.HockeyClient.Current.TrackTrace(ex.ToString());
+        }
     }
 
     /// <summary>
@@ -25,9 +33,7 @@ namespace BackToTheFuture
         public MainWindow()
         {
             Analytics.TrackEvent("MainPage");
-            //HockeyClient.Current.TrackPageView("MainPage");
             InitializeComponent();
-            Analytics.TrackEvent("MainPage");
 
         }
 
@@ -53,6 +59,7 @@ namespace BackToTheFuture
             }
             catch(Exception ex)
             {
+                Analytics.TrackException(ex);
                 result = ex.Message;
             }
             labelCOMInfo.Text = result;
@@ -101,7 +108,7 @@ namespace BackToTheFuture
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                Analytics.TrackEvent(ex.ToString());
+                Analytics.TrackException(ex);
                 // Environment.Exit(-1);
             }
         }
@@ -116,7 +123,7 @@ namespace BackToTheFuture
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, ex.HResult.ToString());
-                Analytics.TrackEvent(ex.ToString());
+                Analytics.TrackException(ex);
             }
         }
 
