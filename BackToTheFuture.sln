@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27130.2027
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28625.82
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpPing", "HttpPing\HttpPing.csproj", "{1CCF710A-072C-46AC-9D0F-B3B021288C46}"
 EndProject
@@ -41,7 +41,6 @@ Global
 		{14ED5135-2FBD-4AFD-8636-26F544940958}.Release|Any CPU.ActiveCfg = Release|x86
 		{14ED5135-2FBD-4AFD-8636-26F544940958}.Release|x64.ActiveCfg = Release|x64
 		{14ED5135-2FBD-4AFD-8636-26F544940958}.Release|x64.Build.0 = Release|x64
-		{14ED5135-2FBD-4AFD-8636-26F544940958}.Release|x64.Deploy.0 = Release|x64
 		{14ED5135-2FBD-4AFD-8636-26F544940958}.Release|x86.ActiveCfg = Release|x86
 		{14ED5135-2FBD-4AFD-8636-26F544940958}.Release|x86.Build.0 = Release|x86
 		{66E750A2-BCDC-4486-8252-8BF0693F2F25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
