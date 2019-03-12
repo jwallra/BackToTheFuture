@@ -20,7 +20,8 @@ namespace BackToTheFuture
 
         internal static void TrackException(Exception ex)
         {
-            Microsoft.HockeyApp.HockeyClient.Current.TrackTrace(ex.ToString());
+            Microsoft.HockeyApp.HockeyClient.Current.TrackException(ex);
+            //Microsoft.HockeyApp.HockeyClient.Current.TrackTrace(ex.ToString());
         }
     }
 
