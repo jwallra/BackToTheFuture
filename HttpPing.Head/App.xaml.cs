@@ -71,6 +71,8 @@ namespace HttpPing.Head
                 // Ensure the current window is active
                 Window.Current.Activate();
             }
+
+            await HockeyClient.Current.SendCrashesAsync();
         }
 
         /// <summary>
